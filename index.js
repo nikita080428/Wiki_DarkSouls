@@ -13,6 +13,7 @@ app.use(cors({ origin: 'http://localhost:5173' }));
 
 // Настройка POST-запроса — JSON
 app.use(express.json());
+app.use(express.static("public"));
 
 // Настройка БД
 let mongoose = require('mongoose');

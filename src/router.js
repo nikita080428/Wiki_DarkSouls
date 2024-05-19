@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 
 // Компоненты страниц
-import Page1 from './views/Page1.vue';
+import HomePage from './views/HomePage.vue';
 import Page2 from './views/Page2.vue';
 
 
@@ -15,8 +15,8 @@ export default createRouter({
     routes: [
         {
             path: '/',
-            name: 'page1',
-            component: Page1,
+            name: 'HomePage',
+            component: HomePage,
         },
         {
             path: '/page2',

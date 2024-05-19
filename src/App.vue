@@ -17,12 +17,31 @@ export default {
 
 <template>
 	<div class="app">
+		<div>
 		<!-- Шапка -->
 		<app-header></app-header>
 
 		<!-- Меняющаяся часть -->
 		<router-view></router-view>
+		</div>
 	</div>
 </template>
 
-<style></style>
+<style>
+@font-face {
+	font-family: 'Actor'; 
+	src: url(/src/assets/shrift/Actor-Regular.ttf); 
+}
+ 
+p {
+	font-family: 'Actor' !important;
+	font-weight: bolder;
+	font-size: 22px;
+}
+.btn {
+	font-family: 'Actor' !important;
+	font-weight: bolder !important;
+	font-size: 22px;
+}
+
+</style>
