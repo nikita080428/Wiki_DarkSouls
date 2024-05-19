@@ -1,4 +1,4 @@
-# 1.Training project on working with the MEVN stack
+# Training project on working with the MEVN stack
 
 This template should help get you started developing with Vue 3 in Vite.
 
