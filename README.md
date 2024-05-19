@@ -1,14 +1,16 @@
-# 1.first-project
+# 1.Training project on working with the MEVN stack
 
 This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
+## Information about
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+The navigation through the pages takes place via rout, while websocket is connected in the forum section.
 
-## Customize configuration
+This is wikipedia, which will contain basic and additional materials for studying the game Dark souls (2).
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Figma
+
+https://www.figma.com/design/aorp0ooBeGFerGe4QmsODJ/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F-%D0%BF%D0%BE-Dark-souls?node-id=0-1&t=L3kmNhykobniO1yd-0
 
 ## Project Setup
 
