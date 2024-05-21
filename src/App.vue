@@ -1,5 +1,5 @@
 <script>
-
+import axios from 'axios';
 // Компоненты
 import AppHeader from './components/AppHeader.vue';
 import { RouterView } from 'vue-router'

@@ -1,22 +1,27 @@
 <script>
+import axios from 'axios';
 import { computed } from 'vue';
 
 export default {
     data() {
         return {
+
         }
     },
     computed: {
             CategorsName() {
                 return this.$route.params.categors
             }
-        }
+        },
+    methods: {
+
+    }
 }
 </script>
 
 <template>
     <div class="container d-flex justify-content-between" style="margin-top: 5%;">
-    <main style="width: 930px;" >
+    <main style="max-width: 930px;" >
         <header class="d-flex justify-content-center">
             <h1 class="pb-3 border-bottom">Категории</h1>
         </header>

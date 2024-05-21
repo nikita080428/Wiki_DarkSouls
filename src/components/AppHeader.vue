@@ -12,6 +12,9 @@ export default {
         },
         goCategoryPage(categors) {
             this.$router.push({name: 'CategoryPage', params: {categors: categors}});
+        },
+        goForumPage() {
+            this.$router.push({name:'ForumPage'});
         }
   }
 }
@@ -58,9 +61,9 @@ export default {
         <img src="/src/assets/menu/create.png" alt="Создание">
         <p class="px-3 m-0">Создание</p>
       </li>
-      <li class="mb-1 d-flex align-items-center">
+      <li class="mb-1 d-flex align-items-center" @click="goForumPage()">
         <img src="/src/assets/menu/forum.png" alt="Форум">
-        <p class="p-2 px-3 m-0">Обсуждение</p>
+        <p class="p-2 px-3 m-0">Форум</p>
       </li>
       <li class="border-top my-3"></li>
     </ul>
