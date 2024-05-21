@@ -17,7 +17,7 @@ export default {
 
 <template>
 	<div class="app">
-		<div>
+		<div class="d-flex">
 		<!-- Шапка -->
 		<app-header></app-header>
 

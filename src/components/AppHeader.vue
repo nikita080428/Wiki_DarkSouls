@@ -1,5 +1,20 @@
 <script>
-
+export default {
+  data(){
+    return{
+      categors: ['Экипировка', 'Магия', 'Локации', 'Персонажи']
+    }
+  }
+  ,
+  methods: {
+    goHomePage() {
+            this.$router.push({name: 'HomePage'});
+        },
+        goCategoryPage(categors) {
+            this.$router.push({name: 'CategoryPage', params: {categors: categors}});
+        }
+  }
+}
 </script>
 <template>
     <div class="flex-shrink-0" style="width: 280px; min-height: 100%; background-color: #00000005 ;">
@@ -8,8 +23,11 @@
       <p class="h3 pb-3 link-body-emphasis text-decoration-none border-bottom">Разделы</p>
     </div>
     <ul class="list-unstyled p-2 mb-0 pb-0">
-      <li class="mb-1 d-flex align-items-center ">
-       <img src="/src/assets/menu/home.png" alt="Домик"> <p class="px-3 m-0">Главная</p>
+      <li class="mb-1 d-flex align-items-center " @click="goHomePage">
+        <img src="/src/assets/menu/home.png" alt="Домик">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed px-3">
+          Главная
+        </button>
       </li>
 
       <!-- категории -->
@@ -21,10 +39,18 @@
         </button>
         <div class="collapse" id="dashboard-collapse">
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 p-3 pt-0 small">
-            <li class="pt-2"><a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">Экипировка</a></li>
-            <li class="pt-2"><a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">Магия</a></li>
-            <li class="pt-2"><a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">Локация</a></li>
-            <li class="pt-2 pb-2"><a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">Персонажи</a></li>
+            <li class="pt-2" @click="goCategoryPage">
+              <a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">{{ categors[0] }}</a>
+            </li>
+            <li class="pt-2" @click="goCategoryPage">
+              <a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">{{categors[1]}}</a>
+            </li>
+            <li class="pt-2" @click="goCategoryPage">
+              <a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">{{categors[2]}}</a>
+            </li>
+            <li class="pt-2 pb-2" @click="goCategoryPage">
+              <a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">{{categors[3]}}</a>
+            </li>
           </ul>
         </div>
       </li>

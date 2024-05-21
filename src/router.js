@@ -3,7 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 // Компоненты страниц
 import HomePage from './views/HomePage.vue';
-import Page2 from './views/Page2.vue';
+import CardPage from './views/CardPage.vue';
+import CategoryPage from './views/CategoryPage.vue';
 
 
 export default createRouter({
@@ -19,9 +20,14 @@ export default createRouter({
             component: HomePage,
         },
         {
-            path: '/page2',
-            name: 'page2',
-            component: Page2
+            path: '/category',
+            name: 'CategoryPage',
+            component: CategoryPage,
+        },
+        {
+            path: '/CategoryPage/card',
+            name: 'CardPage',
+            component: CardPage
         }
     ]
 })
