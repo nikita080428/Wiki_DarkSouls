@@ -3,19 +3,25 @@ import axios from 'axios';
 export default {
 data(){
     return {
-        forum: []
+        forums: []
     }
 },
 methods: {
  async loadData(){
     let response = await axios.get('/forum');
-    this.forum = response.data;
- }
+    this.forums = response.data;
+ },
+ processedDescription(descript){
+    return descript.split("<br>")
+    }
 },
 mounted() {
 this.loadData();
+},
+computed: {
+
 }
-}
+} 
 </script>
 
 <template>
@@ -33,12 +39,12 @@ this.loadData();
             <hr style="width: 930px;">
             <div class="row">
                 <!---->
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="" class="card-img-top" alt="...">
+                <div class="col" v-for="forum in forums ">
+                    <div class="card" style="width: 18rem; height: 25em;">
+                        <img :src="`/src/assets/forum/${forum.tech_info}.jpg`" class="card-img-top" alt="..." style="max-height: 160px ;">
                         <div class="card-body">
-                            <h5 class="card-title">{{  }}</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5 class="card-title">{{ forum.title }}</h5>
+                            <p class="card-text" v-for="descript in processedDescription(forum.descript)"> {{ descript }}  </p>
                             <a href="#" class="btn btn-primary">Перейти</a>
                         </div>
                     </div>

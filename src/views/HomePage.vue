@@ -10,7 +10,7 @@ export default {
 
 <template>
     <div class="container d-flex justify-content-between" style="margin-top: 5%;">
-    <main style="width: 930px;" >
+    <main style="width: 930px;"  >
         <header class="d-flex justify-content-center">
             <h1 class="pb-3 border-bottom">Добро пожаловать</h1>
         </header>

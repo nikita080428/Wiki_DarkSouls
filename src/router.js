@@ -21,12 +21,12 @@ export default createRouter({
             component: HomePage,
         },
         {
-            path: '/category',
+            path: '/category/:categors',
             name: 'CategoryPage',
             component: CategoryPage,
         },
         {
-            path: '/Category/card',
+            path: '/category/:categors/:cardName',
             name: 'CardPage',
             component: CardPage
         },

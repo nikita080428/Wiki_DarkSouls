@@ -2,7 +2,7 @@
 export default {
   data(){
     return{
-      categors: ['Экипировка', 'Магия', 'Локации', 'Персонажи']
+      categors: ['item', 'magic', 'location', 'character']
     }
   }
   ,
@@ -11,6 +11,7 @@ export default {
             this.$router.push({name: 'HomePage'});
         },
         goCategoryPage(categors) {
+          console.log(categors)
             this.$router.push({name: 'CategoryPage', params: {categors: categors}});
         },
         goForumPage() {
@@ -42,17 +43,17 @@ export default {
         </button>
         <div class="collapse" id="dashboard-collapse">
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 p-3 pt-0 small">
-            <li class="pt-2" @click="goCategoryPage">
-              <a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">{{ categors[0] }}</a>
+            <li class="pt-2" @click="goCategoryPage(categors[0])">
+              <a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">Экипировка</a>
             </li>
-            <li class="pt-2" @click="goCategoryPage">
-              <a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">{{categors[1]}}</a>
+            <li class="pt-2" @click="goCategoryPage(categors[1])">
+              <a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">Магия</a>
             </li>
-            <li class="pt-2" @click="goCategoryPage">
-              <a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">{{categors[2]}}</a>
+            <li class="pt-2" @click="goCategoryPage(categors[2])">
+              <a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">Локации</a>
             </li>
-            <li class="pt-2 pb-2" @click="goCategoryPage">
-              <a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">{{categors[3]}}</a>
+            <li class="pt-2 pb-2" @click="goCategoryPage(categors[3])">
+              <a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">Персонажи</a>
             </li>
           </ul>
         </div>
