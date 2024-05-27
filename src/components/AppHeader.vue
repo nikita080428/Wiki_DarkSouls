@@ -84,7 +84,7 @@ export default {
       </li>
       <li class="mb-1 d-flex align-items-center">
         <img src="/src/assets/menu/ofSite.png" alt="Официальный сайт">
-        <p class="px-3 m-0">Оф.сайт</p>
+        <a href="https://en.bandainamcoent.eu/" class="px-3 m-0">Оф.сайт</a>
       </li>
       <li class="mb-1 d-flex align-items-center">
         <img src="/src/assets/menu/FAQ.png" alt="FAQ">

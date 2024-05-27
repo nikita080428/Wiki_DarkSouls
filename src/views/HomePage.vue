@@ -27,8 +27,11 @@ export default {
         
 
     </main>
-    <aside>
-        <h3>Доп меню</h3>
+    <aside class="container" style=" margin-left: 5%;">
+        <div class="container d-flex justify-content-center" style="background-color: #F9F9F9; border-radius: 15px; box-shadow: -1px -12px 8px -4px rgba(34, 60, 80, 0.2) inset;">
+            <h3>Дискорд</h3>
+            <img src="/src/assets/aside/discord.png" alt="Дискорд">
+        </div>
     </aside>
 </div>
 </template>

@@ -18,8 +18,8 @@ export default {
             this.categors = this.CategorsName
         },
     methods: {
-        goHomePage(cardName) {
-            this.$router.push({name: 'CardPage', params: cardName});
+        goCardPage() {
+            this.$router.push({name: 'CardPage'});
         },
         async loadCard(categors){
             let response = await axios.get(`/${categors}`);
@@ -52,7 +52,7 @@ export default {
                             <h5 class="card-title">{{ card.title }}</h5>
                             <p class="card-text" style="margin: 0;">Тип: {{card.type}}</p>
                             <p class="card-text">Прокачка: {{ card.updeta }}</p>
-                            <a href="#" class="btn btn-primary">Перейти</a>
+                            <a @click="goCardPage()" class="btn btn-primary">Перейти</a>
                         </div>
                     </div>
                 </div>
