@@ -64,7 +64,9 @@ export default {
       </li>
       <li class="mb-1 d-flex align-items-center" @click="goForumPage()">
         <img src="/src/assets/menu/forum.png" alt="Форум">
-        <p class="p-2 px-3 m-0">Форум</p>
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed px-3">
+          Форум
+        </button>
       </li>
       <li class="border-top my-3"></li>
     </ul>
@@ -84,7 +86,7 @@ export default {
       </li>
       <li class="mb-1 d-flex align-items-center">
         <img src="/src/assets/menu/ofSite.png" alt="Официальный сайт">
-        <a href="https://en.bandainamcoent.eu/" class="px-3 m-0">Оф.сайт</a>
+        <a href="https://en.bandainamcoent.eu/" class="px-3 m-0 link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Оф.сайт</a>
       </li>
       <li class="mb-1 d-flex align-items-center">
         <img src="/src/assets/menu/FAQ.png" alt="FAQ">

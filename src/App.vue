@@ -33,10 +33,15 @@ export default {
 	src: url(/src/assets/shrift/Actor-Regular.ttf); 
 }
  
-p {
+p, a {
 	font-family: 'Actor' !important;
 	font-weight: bolder;
 	font-size: 22px;
+}
+li a {
+	font-family: 'Actor' !important;
+	font-weight: bolder;
+	font-size: 18px;
 }
 .btn {
 	font-family: 'Actor' !important;

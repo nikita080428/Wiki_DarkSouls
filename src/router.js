@@ -26,7 +26,7 @@ export default createRouter({
             component: CategoryPage,
         },
         {
-            path: '/category/:categors/', // :cardName
+            path: '/category/:categors/:cardName',
             name: 'CardPage',
             component: CardPage
         },

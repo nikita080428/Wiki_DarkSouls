@@ -74,3 +74,30 @@ app.get('/character', async function (req, res) {
     res.status(200).send(character)
 })
 
+// карточка подробная информация
+
+app.get('/item/card', async function (req, res) {
+    let title = req.query.title;
+    let card = await Item.find({ 'title': title });
+    res.status(200).send(card)
+})
+
+app.get('/magic/card', async function (req, res) {
+    let title = req.query.title;
+    let card = await Magic.find({ 'title': title });
+    res.status(200).send(card)
+})
+
+app.get('/location/card', async function (req, res) {
+    let title = req.query.title;
+    let card = await Location.find({ 'title': title });
+    res.status(200).send(card)
+})
+
+app.get('/character/card', async function (req, res) {
+    let title = req.query.title;
+    let card = await Character.find({ 'title': title });
+    res.status(200).send(card)
+})
+
+

@@ -1,6 +1,5 @@
 <script>
 import axios from 'axios';
-import { computed } from 'vue';
 
 export default {
     data() {
@@ -18,8 +17,10 @@ export default {
             this.categors = this.CategorsName
         },
     methods: {
-        goCardPage() {
-            this.$router.push({name: 'CardPage'});
+        goCardPage(card) {
+            this.$router.push({name: 'CardPage', params: {
+                cardName: card.title
+            }});
         },
         async loadCard(categors){
             let response = await axios.get(`/${categors}`);
@@ -52,7 +53,7 @@ export default {
                             <h5 class="card-title">{{ card.title }}</h5>
                             <p class="card-text" style="margin: 0;">Тип: {{card.type}}</p>
                             <p class="card-text">Прокачка: {{ card.updeta }}</p>
-                            <a @click="goCardPage()" class="btn btn-primary">Перейти</a>
+                            <a @click="goCardPage(card)" class="btn btn-primary">Перейти</a>
                         </div>
                     </div>
                 </div>
@@ -60,11 +61,50 @@ export default {
 
         </div>
         </section>
+        <div style="margin-top: 250px;">
+            <form>
+  <div class="mb-3">
+    <label for="itex" class="form-label">Поиск предмета</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="itex">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+        </div>
         
 
     </main>
-    <aside>
-        <h3>Доп меню</h3>
+    <aside class="container" style=" margin-left: 5%;">
+        <div style="background-color: #F9F9F9; border-radius: 15px; box-shadow: -1px -12px 8px -4px rgba(34, 60, 80, 0.2) inset;">
+            <section class="container  d-flex flex-column align-items-center">
+            <h3>Дискорд</h3>
+            <img style="max-width: 80px;" src="/src/assets/aside/discord.png" alt="Дискорд">
+            <hr style="width: 276px;">
+            <div>
+                <p style="margin: 0;">Онлайн: 56/100</p>
+            </div>
+            <hr style="width: 276px;">
+        </section>
+        <section class="d-flex gap-3 ">
+            <div>
+                <p>Админы</p>
+            </div>
+            <div>
+                <img style="margin-top: 15px;" src="/src/assets/aside/Arrow.png" alt="">
+                <p style="font-size: 18px; font-weight: 600;">Dom rus<br>Константин</p>
+            </div>
+        </section>
+        <hr style="width: 276px;">
+        <section class="d-flex gap-3 ">
+            <div>
+                <p>Редакторы</p>
+            </div>
+            <div>
+                <img style="margin-top: 15px;" src="/src/assets/aside/Arrow.png" alt="">
+                <p style="font-size: 18px; font-weight: 600;">Саня Аморский<br>Sister 12 rus</p>
+            </div>
+        </section>
+        </div>
     </aside>
 </div>
 </template>
