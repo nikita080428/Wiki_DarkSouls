@@ -2,7 +2,7 @@
 export default {
   data(){
     return{
-      categors: ['Экипировка', 'Магия', 'Локации', 'Персонажи']
+      categors: ['item', 'magic', 'location', 'character']
     }
   }
   ,
@@ -11,7 +11,11 @@ export default {
             this.$router.push({name: 'HomePage'});
         },
         goCategoryPage(categors) {
+          console.log(categors)
             this.$router.push({name: 'CategoryPage', params: {categors: categors}});
+        },
+        goForumPage() {
+            this.$router.push({name:'ForumPage'});
         }
   }
 }
@@ -39,17 +43,17 @@ export default {
         </button>
         <div class="collapse" id="dashboard-collapse">
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 p-3 pt-0 small">
-            <li class="pt-2" @click="goCategoryPage">
-              <a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">{{ categors[0] }}</a>
+            <li class="pt-2" @click="goCategoryPage(categors[0])">
+              <a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">Экипировка</a>
             </li>
-            <li class="pt-2" @click="goCategoryPage">
-              <a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">{{categors[1]}}</a>
+            <li class="pt-2" @click="goCategoryPage(categors[1])">
+              <a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">Магия</a>
             </li>
-            <li class="pt-2" @click="goCategoryPage">
-              <a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">{{categors[2]}}</a>
+            <li class="pt-2" @click="goCategoryPage(categors[2])">
+              <a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">Локации</a>
             </li>
-            <li class="pt-2 pb-2" @click="goCategoryPage">
-              <a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">{{categors[3]}}</a>
+            <li class="pt-2 pb-2" @click="goCategoryPage(categors[3])">
+              <a href="#" class="link-body-emphasis link-dark d-inline-flex text-decoration-none rounded">Персонажи</a>
             </li>
           </ul>
         </div>
@@ -58,9 +62,9 @@ export default {
         <img src="/src/assets/menu/create.png" alt="Создание">
         <p class="px-3 m-0">Создание</p>
       </li>
-      <li class="mb-1 d-flex align-items-center">
+      <li class="mb-1 d-flex align-items-center" @click="goForumPage()">
         <img src="/src/assets/menu/forum.png" alt="Форум">
-        <p class="p-2 px-3 m-0">Обсуждение</p>
+        <p class="p-2 px-3 m-0">Форум</p>
       </li>
       <li class="border-top my-3"></li>
     </ul>
@@ -80,7 +84,7 @@ export default {
       </li>
       <li class="mb-1 d-flex align-items-center">
         <img src="/src/assets/menu/ofSite.png" alt="Официальный сайт">
-        <p class="px-3 m-0">Оф.сайт</p>
+        <a href="https://en.bandainamcoent.eu/" class="px-3 m-0">Оф.сайт</a>
       </li>
       <li class="mb-1 d-flex align-items-center">
         <img src="/src/assets/menu/FAQ.png" alt="FAQ">

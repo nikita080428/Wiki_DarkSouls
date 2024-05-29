@@ -10,7 +10,7 @@ export default {
 
 <template>
     <div class="container d-flex justify-content-between" style="margin-top: 5%;">
-    <main style="width: 930px;" >
+    <main style="width: 930px;"  >
         <header class="d-flex justify-content-center">
             <h1 class="pb-3 border-bottom">Добро пожаловать</h1>
         </header>
@@ -27,8 +27,11 @@ export default {
         
 
     </main>
-    <aside>
-        <h3>Доп меню</h3>
+    <aside class="container" style=" margin-left: 5%;">
+        <div class="container d-flex justify-content-center" style="background-color: #F9F9F9; border-radius: 15px; box-shadow: -1px -12px 8px -4px rgba(34, 60, 80, 0.2) inset;">
+            <h3>Дискорд</h3>
+            <img src="/src/assets/aside/discord.png" alt="Дискорд">
+        </div>
     </aside>
 </div>
 </template>
