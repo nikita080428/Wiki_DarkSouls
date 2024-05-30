@@ -5,7 +5,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from './views/HomePage.vue';
 import CardPage from './views/CardPage.vue';
 import CategoryPage from './views/CategoryPage.vue';
+import CardCreatePage from './views/CardCreatePage.vue';
 import ForumPage from './views/ForumPage.vue';
+
 
 
 export default createRouter({
@@ -29,6 +31,11 @@ export default createRouter({
             path: '/category/:categors/:cardName',
             name: 'CardPage',
             component: CardPage
+        },
+        {
+            path: '/cardCreate',
+            name: 'CardCreatePage',
+            component: CardCreatePage
         },
         {
             path: '/forum',

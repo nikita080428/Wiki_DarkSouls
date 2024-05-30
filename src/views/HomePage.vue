@@ -3,7 +3,11 @@
 <script>
 
 export default {
-
+    data(){
+    return{
+      categors: ['item', 'magic', 'location', 'character']
+    }
+  }
 }
 </script>
 
@@ -34,8 +38,34 @@ export default {
                 <h3>Категории</h3>
             </div>
             <hr style="width: 930px;">
-            <div style="height: 150px;">
-               
+            <div style="height: 150px;" class="d-flex justify-content-around gap-4">
+               <div class="d-flex flex-column align-items-center" style="min-width: 150px;">
+                <button 
+                 class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed px-3" style="color: #6E7704;">
+                    Экипировка
+                </button>
+                <hr style="width: 65px; margin: 0;">
+                <p style="font-size: 18px;">Палаш</p>
+                <p style="font-size: 18px;">Кинжал</p>
+               </div>
+               <div class="d-flex flex-column align-items-center" style="min-width: 150px;">
+                <button 
+                class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed px-3" style="color: #6E7704;">
+                    Магия
+                </button>
+                <hr style="width: 65px; margin: 0;">
+                <p style="font-size: 18px;">Стрела души</p>
+                <p style="font-size: 18px;">Огненный шар</p>
+               </div>
+               <div class="d-flex flex-column align-items-center" style="min-width: 150px;">
+                <button 
+                class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed px-3" style="color: #6E7704;" >
+                Локация
+                </button>
+                <hr style="width: 65px; margin: 0;">
+                <p style="font-size: 18px;">Лес Павших</p>
+                <p style="font-size: 18px;">Лагуна</p>
+               </div>
             </div>
 
         </div>

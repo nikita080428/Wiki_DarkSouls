@@ -16,6 +16,9 @@ export default {
         },
         goForumPage() {
             this.$router.push({name:'ForumPage'});
+        },
+        goCardCreatePage() {
+            this.$router.push({name:'CardCreatePage'});
         }
   }
 }
@@ -58,9 +61,11 @@ export default {
           </ul>
         </div>
       </li>
-      <li class="mb-1 d-flex align-items-center">
+      <li class="mb-1 d-flex align-items-center" @click="goCardCreatePage()">
         <img src="/src/assets/menu/create.png" alt="Создание">
-        <p class="px-3 m-0">Создание</p>
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed px-3">
+          Создание
+        </button>
       </li>
       <li class="mb-1 d-flex align-items-center" @click="goForumPage()">
         <img src="/src/assets/menu/forum.png" alt="Форум">
